@@ -11,10 +11,6 @@ for c in \
     '.xsession' \
     '.bash_profile' \
     '.emacs' \
-    '.vimperatorrc' \
-    '.vimperator/wilderness/base16-mixedchalk.vimp' \
-    '.vimperator/wilderness/base16-mixedchalk.uicolors.vimp' \
-    '.vimperator/wilderness/cyrillic.vimp' \
     '.ghcPkgUtils.source' \
     '.arbtt/categorize.cfg' \
     '.gitconfig' \
