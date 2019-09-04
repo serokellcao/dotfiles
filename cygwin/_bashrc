@@ -1,0 +1,21 @@
+# If not running interactively, don't do anything
+[[ "$-" != *i* ]] && return
+
+set -o vi
+
+export EDITOR="vim"
+export TERM="screen-256color"
+
+ps1_date="\[$(tput bold)\]\[$(tput setaf 5)\]\$(date +'%a %b %d %H:%M:%S:%N')"
+ps1_user="\[$(tput setaf 2)\]\u\[$(tput setaf 3)\]@\[$(tput setaf 2)\]\h"
+ps1_path="\[$(tput setaf 3)\]\w"
+ps1_lambda="\[$(tput setaf 8)\]λ\[$(tput sgr0)\]"
+
+git_prompt() {
+  local ref="$(git symbolic-ref -q HEAD 2>/dev/null)"
+  if [ -n "$ref" ]; then
+   echo "$(tput setaf 241)(${ref#refs/heads/}) "
+  fi
+}
+
+export PS1="${ps1_date} ${ps1_user} ${ps1_path} \$(git_prompt)\n${ps1_lambda} "
