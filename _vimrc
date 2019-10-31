@@ -10,6 +10,7 @@ set tabstop=2
 set shiftwidth=2
 set backspace=2
 set expandtab
+set nohlsearch
 """"""""""""""""""""""""""""""
 syntax off
 filetype on
@@ -28,3 +29,7 @@ autocmd FileType make setlocal noexpandtab shiftwidth=4 softtabstop=0
 """"""""""""""""""""""""""""""
 autocmd BufRead,BufEnter *.txt,*.md,*.markdown setlocal textwidth=72
 """"""""""""""""""""""""""""""
+hi StatusLineNC ctermfg=8 ctermbg=7
+hi StatusLine ctermfg=7 ctermbg=8
+""""""""""""""""""""""""""""""
+set runtimepath^=~/.vim/bundle/ctrlp.vim
