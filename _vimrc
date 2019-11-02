@@ -14,6 +14,8 @@ set nohlsearch
 """"""""""""""""""""""""""""""
 syntax off
 filetype on
+set background=dark
+set t_Co=256
 """"""""""""""""""""""""""""""
 let mapleader=","
 set pastetoggle=<Leader>v
