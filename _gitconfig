@@ -1,5 +1,5 @@
 [user]
-	email = jm@memorici.de
+	email = jm@serokell.io
 	name = Jonn Mostovoy
 [alias]
   branches = branch -a
